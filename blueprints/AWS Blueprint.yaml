@@ -18,7 +18,6 @@ clouds:
 inputs:
   - advanced_app_port: 1234
 
-
 applications:
   - basic-app:
       instances: 1
@@ -30,3 +29,13 @@ applications:
       input_values:
         - port_number : $advanced_app_port
 
+infrastructure:
+  connectivity:
+    green_host: green.lv-colony-prod.com
+    virtual_network:
+        id: vpc-0f664ff38669f5104
+        subnets:
+            management: 
+            - subnet-0b2b819b124cb4895
+            application: 
+            - subnet-05974531be6ca4c49
