@@ -9,8 +9,7 @@ spec_version: 1
 kind: blueprint
 
 metadata:
-  description: Blueprint that deploys two applications in AWS
-
+  description: Demo Production Blueprints with 2 Ubuntu apps
 
 clouds:
   - AWS: eu-west-1
@@ -21,13 +20,16 @@ inputs:
 applications:
   - basic-app:
       instances: 1
+      input_values:
+		- AWS_Instance_Type: t3.small
 
   - advanced-app:
       instances: 1
       depends_on:
         - basic-app
       input_values:
-        - port_number : $advanced_app_port
+        - port_number: $advanced_app_port
+		- AWS_Instance_Type: t3.small
 
 infrastructure:
   connectivity:

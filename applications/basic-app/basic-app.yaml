@@ -2,15 +2,15 @@ spec_version: 1
 kind: application
 
 inputs:
-  - AWS_Instance_Type: t3.medium
+  - AWS_Instance_Type: t3.small
 
 source:
   os_type: linux
   image:
     ami:                                                   # AWS Image
-      - id: ami-f90a4880
+      - id: ami-0f2ed58082cb08a4d
         region: eu-west-1
-        username: root
+        username: ubuntu
     azure_image:                                           # Azure Image
       - urn: Canonical:UbuntuServer:16.04-LTS:latest
         username: adminuser
@@ -19,7 +19,7 @@ infrastructure:
   compute:
     spec:
       aws:
-        instance_type: t2.medium
+        instance_type: $AWS_Instance_Type
       azure:
         vm_size: Basic_A2
 
