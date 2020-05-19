@@ -38,4 +38,5 @@ infrastructure:
             management: 
             - subnet-0b2b819b124cb4895
             application: 
-            - subnet-05974531be6ca4c49
+            - subnet-092e9b9878b99690a
+			- subnet-02970e135a098951a
