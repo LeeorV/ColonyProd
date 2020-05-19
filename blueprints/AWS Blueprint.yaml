@@ -21,7 +21,7 @@ applications:
   - basic-app:
       instances: 1
       input_values:
-		- AWS_Instance_Type: t3.small
+        - AWS_Instance_Type: t3.small
 
   - advanced-app:
       instances: 1
@@ -29,7 +29,7 @@ applications:
         - basic-app
       input_values:
         - port_number: $advanced_app_port
-		- AWS_Instance_Type: t3.small
+        - AWS_Instance_Type: t3.small
 
 infrastructure:
   connectivity:
@@ -38,7 +38,7 @@ infrastructure:
         id: vpc-0f664ff38669f5104
         subnets:
             management: 
-            - subnet-0b2b819b124cb4895
+              - subnet-0b2b819b124cb4895
             application: 
-            - subnet-092e9b9878b99690a
-			- subnet-02970e135a098951a
+              - subnet-092e9b9878b99690a
+              - subnet-02970e135a098951a
