@@ -21,6 +21,9 @@ inputs:
   - DB_NAME: wordpress_demo  
   # DB_NAME - a target database name
 
+artifacts:
+  - wordpress: wordpress-5.4.1.tar.gz
+  
 # These are the applications that will be deployed in this blueprint
 applications:
   - mysql:  # One instance of mysql (see: applications/mysql/mysql.yaml)
